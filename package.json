@@ -1,0 +1,9 @@
+{
+  "name": "cloudbudget",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^12.0.0"
+  }
+}
