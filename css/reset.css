@@ -2,11 +2,13 @@ body,
 div,
 ol,
 ul,
+li,
 p,
 header,
 footer,
 body,
-img {
+img,
+section {
     box-sizing: border-box;
 }
 
@@ -16,7 +18,10 @@ header,
 ul,
 li,
 img,
-body {
+body,
+h1,
+h2,
+h3 {
     padding: 0;
     margin: 0;
 }
