@@ -3,6 +3,11 @@ body {
     text-decoration: none;
 }
 
+.content {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .filler {
     width: 100%;
     height: 75.5px;
@@ -423,7 +428,7 @@ color: #ED4C5C;
 
 .saving {
     /* position: relative; */
-    padding: 94px 0 96px;
+    padding: 94px 10px 96px;
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -467,6 +472,7 @@ color: #ED4C5C;
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 0;
 }
 
 
@@ -484,6 +490,7 @@ color: #ED4C5C;
     border-radius: 16px;
     width: 100%;
     height: 100%;
+    z-index: -2;
 }
 
 .party {
@@ -515,3 +522,71 @@ color: #ED4C5C;
     width: 100%;
     height: 100%;
 }
+
+/* ------------------------------- */
+.contact {
+    padding: 117px 0 78px;
+    display: flex;
+}
+
+.card-contact {
+    width: 100%;
+}
+
+.contact-list {
+    color: #000000;
+    font-size: 36px;
+}
+
+.contact-text {
+    color: #000000;
+    font-size: 14px;
+    padding-top: 60px;
+    padding-bottom: 145px;
+}
+
+.registration {
+    width: 100%;
+    display: grid;
+    gap: 24px;
+}
+
+
+.registration-item {
+    border: solid 1px;
+    color: #000000;
+    border-radius: 8px;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 30px ;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-item-name {
+    margin-right: 30px;
+    /* width: calc(50% - 30px); */
+}
+
+.registration-item-name:last-child {
+    margin-right: 0;
+}
+
+.registration-text {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(19, 39, 67, 0.5);
+}
+
+.submit {
+    background-color: #ED4C5C;
+    border-radius: 8px;
+    padding: 16px 34px;
+    width: fit-content;
+}
+
+/* ---------------------- */
+
