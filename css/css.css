@@ -213,7 +213,7 @@ color: #ED4C5C;
         font-size: 18px;
         line-height: 22px;
         font-weight: 600;
-        text-align: start;
+        text-align: center;
         padding: 10px 10px;
     }
 }
@@ -585,6 +585,13 @@ color: #ED4C5C;
     font-size: 36px;
 }
 
+@media (max-width: 850px) {
+    .contact-list {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
 .contact-text {
     color: #000000;
     font-size: 14px;
@@ -668,6 +675,27 @@ color: #ED4C5C;
     background-color: #FAFAFA;
 }
 
+.contacts {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .contacts {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        color: #000;
+    }
+}
+
+.img-contacts {
+    width: 20px;
+}
+
+.img-contacts-item {
+    width: 100%;
+}
+
 .footer {
     display: flex;
     padding: 86px 0 100px;
@@ -676,9 +704,9 @@ color: #ED4C5C;
 
 @media (max-width: 850px) {
     .footer {
-        display: flex;
+        display: none;
         flex-direction: column;
-        padding: 10px 0 10px;
+        padding: 10px 10px;
         justify-content: space-between;
     }
 }
