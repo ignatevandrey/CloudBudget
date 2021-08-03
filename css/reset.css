@@ -8,7 +8,9 @@ header,
 footer,
 body,
 img,
-section {
+section,
+form,
+input {
     box-sizing: border-box;
 }
 
