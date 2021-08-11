@@ -653,160 +653,125 @@ body {
   background-color: #fafafa;
 }
 
-.contacts {
-  display: none;
+.wrapper-accordion {
+    color: #000000;
+}
+.accordion {
+    /* display: flex; */
 }
 
-@media (max-width: 850px) {
-  .contacts {
-    padding: 10px 10px;
+@media (min-width: 850px) {
+  .accordion {
     display: flex;
-    justify-content: space-between;
-    color: #000;
   }
 }
-
-.img-contacts {
-  width: 20px;
+.accordion_item {
+    position: relative;
+    margin-right: 20px;
+    width: 100%;
+    overflow: hidden
 }
 
-.img-contacts-item {
-  width: 100%;
+.accordion_item:last-child {
+    margin-right: 0;
 }
 
-.footer {
-  display: flex;
-  padding: 86px 0 100px;
-  justify-content: space-between;
+
+.accordion_item_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
-@media (max-width: 850px) {
-  .footer {
+@media (min-width: 850px) {
+  .accordion_item_input {
     display: none;
-    flex-direction: column;
-    padding: 10px 10px;
+}
+}
+.accordion_item_trigger {
+    display: flex;
+    padding: 20px;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+@media (min-width: 850px) {
+  .accordion_item_trigger {
+    display: block;
+    padding: 20px;
+    border: none;
     justify-content: space-between;
   }
 }
 
-.heading-footer {
-  color: #101010;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
+.img_galca {
+    width: 30px;
 }
 
-@media (max-width: 850px) {
-  .heading-footer {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 10px;
-    padding-top: 10px;
+@media (min-width: 850px) {
+  .img_galca {
+    display: none;
   }
 }
 
-.footer-list {
-  list-style-type: none;
-  padding-top: 32px;
+.accordion_item_content {
+    display: none;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-top: none;
 }
 
-@media (max-width: 850px) {
-  .footer-list {
-    padding-top: 20px;
+@media (min-width: 850px) {
+  .accordion_item_content {
+    display: none;
+    padding: 10px 20px;
+    border: none;
+    border-top: none;
   }
 }
 
-.footer-item {
-  font-size: 12px;
-  font-weight: 400;
-  color: #101010;
-  padding-top: 32px;
-  line-height: 20px;
+.accordion_item_input:checked ~ .accordion_item_trigger {
+    background-color: rgba(240, 248, 255);
 }
 
-@media (max-width: 850px) {
-  .footer-item {
-    font-size: 10px;
-    font-weight: 400;
-    color: #101010;
-    padding-top: 10px;
-    line-height: 20px;
+@media (min-width: 850px) {
+  .accordion_item_input:checked ~ .accordion_item_trigger {
+    background-color: transparent;
   }
 }
 
-.footer-list-item {
-  color: #101010;
-  line-height: 20px;
+.accordion_item_input:checked ~ .accordion_item_trigger .img_galca {
+    transform: rotateX(-180deg);
+    transition: 0.3s;
 }
 
-@media (max-width: 850px) {
-  .footer-list-item {
-    color: #101010;
-    line-height: 10px;
-    font-size: 10px;
+.accordion_item_input:not(checked) ~ .accordion_item_trigger .img_galca {
+    transform: rotateX(0deg);
+    transition: 0.3s;
+}
+
+.accordion_item_input:checked ~ .accordion_item_content {
+    display: block;
+    background-color: transparent;
+}
+
+@media (min-width: 850px) {
+  .accordion_item_input:checked ~ .accordion_item_content {
+    background-color: none;
   }
 }
 
-.messengers-list-item {
-  color: #101010;
-  padding-top: 20px;
-}
-
-@media (max-width: 850px) {
-  .messengers-list-item {
-    color: #101010;
-    padding-top: 10px;
-    font-size: 10px;
+@media (min-width: 850px) {
+  .accordion_item_input:not(checked) ~ .accordion_item_content {
+    display: block;
+    background-color: none;
   }
-}
-
-.messengers-list-item:first-child {
-  padding-top: 0;
-}
-
-.messengers {
-  padding-right: 16px;
-  padding-top: 26px;
-}
-
-@media (max-width: 850px) {
-  .messengers {
-    padding-right: 10px;
-    padding-top: 10px;
-  }
-}
-
-.secure {
-  padding-top: 30px;
-}
-
-@media (max-width: 850px) {
-  .secure {
-    padding-top: 10px;
-    width: 100px;
-  }
-}
-
-.secure-img {
-  width: 100%;
 }
 
 .copyright-wrapper {
-  padding: 86px 0;
+  color: #000;
   max-width: 1200px;
   margin: auto;
-}
-
-@media (max-width: 850px) {
-  .copyright-wrapper {
-    padding: 10px 10px;
-    max-width: 1200px;
-    margin: auto;
-  }
-}
-
-.copyright {
-  color: #101010;
-  font-size: 12px;
-  font-weight: 400;
+  padding: 20px 0;
 }
